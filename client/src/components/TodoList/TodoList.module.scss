@@ -1,0 +1,99 @@
+.todo_wrapper {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  color: #eeeeee;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.todo_show_button {
+  cursor: pointer;
+  padding: 0.3rem 0.5rem;
+  background: rgba(0,0,0,0.4);
+}
+
+.todo_list {
+  margin-bottom: 1rem;
+  min-width: 300px;
+  border-radius: 5px;
+  background-color: rgba(0,0,0,0.4);
+}
+.todo_form {
+  width: 100%;
+  input {
+    width: 100%;
+    border: none;
+    background-color: rgba(0,0,0,0.2);
+    outline: none;
+    color: #eeeeee;
+    border-top: 1px solid #868686;
+    padding: 0.5rem 0;
+    &::placeholder {
+
+    }
+  }
+}
+
+.checkbox {
+  input[type=checkbox] {
+    visibility: hidden;
+  }
+  width: 1rem;
+  position: relative;
+  label {
+    cursor: pointer;
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    top:0;
+    left: 0;
+    border:2px solid #ddd;
+    border-radius: 5px;
+    background: transparent;
+    &:after {
+      opacity: 0.2;
+      content: '';
+      position: absolute;
+      width: 9px;
+      height: 5px;
+      background: transparent;
+      top: 3px;
+      left: 3px;
+      border: 3px solid #eee;
+      border-top: none;
+      border-right: none;
+      transform: rotate(-45deg);
+    }
+    &:hover:after {
+      opacity: 0.5;
+    }
+  }
+}
+
+.checkbox input[type=checkbox]:checked + label:after {
+  opacity: 1;
+}
+
+
+.todo_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.2rem 0;
+  .todoValue{
+    text-align: center;
+  }
+  input {
+    background: none;
+  }
+  button {
+    background: none;
+    color: red;
+    border: none;
+    cursor: pointer;
+  }
+}
+

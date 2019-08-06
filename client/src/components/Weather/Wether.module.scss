@@ -1,0 +1,14 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  color: #eeeeee;
+  align-items: center;
+}
+.icon {
+  height: 75px;
+}
+.values {
+  text-align: center;
+  position: relative;
+  top: 5px;
+}

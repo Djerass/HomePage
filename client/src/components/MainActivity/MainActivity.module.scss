@@ -1,0 +1,83 @@
+@import "../../SharedStyles/vars";
+
+.main_todo {
+  color: $light-color;
+  display: flex;
+  align-items: baseline;
+  font-size: 2rem;
+  text-align: center;
+  justify-content: center;
+  input[type=checkbox] {
+    visibility: hidden;
+  }
+  div {
+    margin: 0 1rem;
+  }
+  button {
+    outline: none;
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+  }
+}
+
+.checkbox {
+  width: 25px;
+  position: relative;
+  label {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top:10px;
+    left: 0;
+    border:2px solid #ddd;
+    border-radius: 5px;
+    background: transparent;
+    &:after {
+      opacity: 0.2;
+      content: '';
+      position: absolute;
+      width: 9px;
+      height: 5px;
+      background: transparent;
+      top: 6px;
+      left: 7px;
+      border: 3px solid $light-color;
+      border-top: none;
+      border-right: none;
+      transform: rotate(-45deg);
+    }
+    &:hover:after {
+      opacity: 0.5;
+    }
+  }
+}
+
+.checkbox input[type=checkbox]:checked + label:after {
+  opacity: 1;
+}
+
+.main_input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: #eeeeee;
+  label {
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  input {
+    background: none;
+    width: 450px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid $light-color;
+    color: $light-color;
+    text-align: center;
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,33 @@
+.form {
+  width: 300px;
+}
+
+.formGroup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid #eee;
+  input {
+    background: none;
+    border: none;
+    outline: none;
+    color: #eee;
+    &::placeholder {
+      color: #ffffff;
+    }
+    &:focus {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+  select {
+    border: none;
+    background: none;
+    outline: none;
+    color: #eee;
+    option {
+      color: black;
+      background: none;
+    }
+  }
+}
